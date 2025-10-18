@@ -3,6 +3,8 @@
 A lightweight **Python-based dynamic wallpaper changer** that automatically fetches beautiful wallpapers from your favorite **Reddit subreddits**, filters them by resolution, and sets them as your desktop background.
 It also notifies you every time your wallpaper changes — and you can even skip to the next wallpaper instantly.
 
+> Made it because was bored to find a good wallpaper 🫠
+
 ---
 
 ## 🚀 Features
