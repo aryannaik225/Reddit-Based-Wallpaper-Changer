@@ -199,7 +199,6 @@ This project is released under the **MIT License** — you’re free to use, mod
 ## ✨ Author
 
 **Aryan Naik**
-💡 “Automating beauty, one wallpaper at a time.”
 🔗 [GitHub](https://github.com/aryannaik225)
 
 ---
