@@ -1,0 +1,13 @@
+{
+  "subreddits": [
+    "wallpaper",
+    "EarthPorn",
+    "CityPorn",
+    "SpacePorn",
+    "MinimalWallpaper",
+    "ImaginaryLandscapes"
+  ],
+  "min_width": 1920,
+  "min_height": 1080,
+  "change_interval": 3600
+}

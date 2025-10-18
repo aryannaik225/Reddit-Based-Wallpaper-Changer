@@ -7,20 +7,34 @@ from datetime import datetime
 from plyer import notification
 from PIL import Image
 from io import BytesIO
+import json
 
 # ========== CONFIG ==========
-SUBREDDITS = [
-    "wallpaper",
-    "EarthPorn",
-    "CityPorn",
-    "SpacePorn",
-    "MinimalWallpaper",
-    "ImaginaryLandscapes"
-]
+CONFIG_FILE = "config.json"
 
-MIN_WIDTH = 1920
-MIN_HEIGHT = 1080
-CHANGE_INTERVAL = 3600  # seconds (1 hour)
+def load_config():
+    try:
+        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        return config
+    except Exception as e:
+        print(f"[Config Error] Could not read {CONFIG_FILE}: {e}")
+        return {
+            "subreddits": [
+                "wallpaper", "EarthPorn", "CityPorn",
+                "SpacePorn", "MinimalWallpaper", "ImaginaryLandscapes"
+            ],
+            "min_width": 1920,
+            "min_height": 1080,
+            "change_interval": 3600
+        }
+
+config = load_config()
+
+SUBREDDITS = config["subreddits"]
+MIN_WIDTH = config["min_width"]
+MIN_HEIGHT = config["min_height"]
+CHANGE_INTERVAL = config["change_interval"]
 FOLDER = "wallpapers"
 SEEN_FILE = "seen.txt"
 SKIP_FILE = "skip.txt"
